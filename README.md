@@ -1,44 +1,49 @@
-<details>
-  <summary><strong>Project Folder Structure</strong></summary>
-  <pre>
-animal_disease_prediction/
-├── data/
-│   ├── raw/                  # Raw dataset files
-│   ├── processed/            # Processed and cleaned dataset files
-│   ├── external/             # External datasets used for additional insights
-│   └── interim/              # Temporary data files during processing
-├── notebooks/                # Jupyter notebooks for experimentation
-├── src/                      # Source code for the project
-│   ├── __init__.py
-│   ├── data/                 # Data preprocessing and handling
-│   │   ├── __init__.py
-│   │   ├── load_data.py      # Data loading utilities
-│   │   ├── clean_data.py     # Cleaning data utilities
-│   │   ├── feature_scaling.py # Feature scaling functions
-│   │   └── preprocessing.py  # Preprocessing pipeline
-│   ├── models/               # Models for prediction
-│   │   ├── __init__.py
-│   │   ├── train_model.py    # Model training utilities
-│   │   ├── evaluate_model.py # Model evaluation functions
-│   │   └── predict.py        # Model inference
-│   ├── utils/                # Helper functions and scripts
-│   │   ├── __init__.py
-│   │   ├── logging.py        # Logging utilities
-│   │   ├── config.py         # Configuration settings
-│   │   └── visualization.py  # Visualization tools
-│   ├── pipelines/            # End-to-end processing pipelines
-│   │   ├── __init__.py
-│   │   └── prediction_pipeline.py
-│   └── tests/                # Unit tests
-│       ├── __init__.py
-│       ├── test_data.py      # Tests for data handling
-│       ├── test_models.py    # Tests for models
-│       └── test_utils.py     # Tests for utilities
-├── requirements.txt          # Python dependencies
-├── Dockerfile                # Dockerfile for containerization
-├── .env                      # Environment variables
-├── .gitignore                # Git ignore file
-├── README.md                 # Project documentation
-└── setup.py                  # Setup script for the project
-  </pre>
-</details>
+.
+├── MANIFEST.in
+├── README.md
+├── data
+│   └── raw
+│       └── cleaned_animal_disease_prediction.csv
+├── notebooks
+│   ├── Evaluation.ipynb
+│   ├── ModelTraining.ipynb
+│   ├── PreProcessing.ipynb
+│   └── Visualization.ipynb
+├── pyproject.toml
+└── src
+    ├── __init__.py
+    ├── data
+    │   ├── __init__.py
+    │   ├── feature_scaling.py
+    │   ├── load_data.py
+    │   ├── preprocessing.py
+    │   └── preprocessing_input.py
+    ├── main.py
+    ├── models
+    │   ├── __init__.py
+    │   ├── class_dicts.json
+    │   ├── constant_filter.joblib
+    │   ├── encoders.joblib
+    │   ├── evaluate_model.py
+    │   ├── one_hot_encoder.joblib
+    │   ├── predict.py
+    │   ├── rf_model.joblib
+    │   ├── scaler.joblib
+    │   ├── selector.joblib
+    │   ├── train_model.py
+    │   └── xgb_model.joblib
+    ├── pipelines
+    │   ├── __init__.py
+    │   ├── model_development.py
+    │   └── prediction_pipeline.py
+    ├── test.py
+    ├── test_data.py
+    ├── test_models.py
+    ├── test_utils.py
+    └── utils
+        ├── __init__.py
+        ├── config.py
+        ├── load_objects.py
+        └── logging.py
+
+9 directories, 38 files
