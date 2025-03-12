@@ -22,6 +22,7 @@ Requires-Dist: seaborn>=0.13.2
 Requires-Dist: joblib
 Requires-Dist: xgboost
 Requires-Dist: scipy
+Requires-Dist: importlib
 Provides-Extra: dev
 Requires-Dist: pytest>=6.2; extra == "dev"
 
@@ -34,37 +35,6 @@ Requires-Dist: pytest>=6.2; extra == "dev"
 │   ├── config.py
 │   ├── model_loader.py
 │   └── routes.py
-├── build
-│   ├── bdist.macosx-11.0-arm64
-│   └── lib
-│       └── animal_disease_prediction
-│           ├── __init__.py
-│           ├── data
-│           │   ├── __init__.py
-│           │   ├── feature_scaling.py
-│           │   ├── load_data.py
-│           │   ├── preprocessing.py
-│           │   ├── preprocessing_input.py
-│           │   └── test.py
-│           ├── dev
-│           │   ├── main.py
-│           │   ├── test.py
-│           │   ├── test_data.py
-│           │   ├── test_models.py
-│           │   └── test_utils.py
-│           ├── models
-│           │   ├── __init__.py
-│           │   ├── evaluate_model.py
-│           │   ├── predict.py
-│           │   └── train_model.py
-│           ├── pipelines
-│           │   ├── __init__.py
-│           │   ├── model_development.py
-│           │   └── prediction_pipeline.py
-│           └── utils
-│               ├── __init__.py
-│               ├── config.py
-│               └── load_objects.py
 ├── data
 │   └── cleaned_animal_disease_prediction.csv
 ├── dist
@@ -78,40 +48,52 @@ Requires-Dist: pytest>=6.2; extra == "dev"
 ├── pyproject.toml
 ├── requirements.txt
 └── src
-    └── animal_disease_prediction
-        ├── __init__.py
-        ├── data
-        │   ├── __init__.py
-        │   ├── feature_scaling.py
-        │   ├── load_data.py
-        │   ├── preprocessing.py
-        │   └── preprocessing_input.py
-        ├── dev
-        │   ├── main.py
-        │   ├── test.py
-        │   ├── test_data.py
-        │   ├── test_models.py
-        │   └── test_utils.py
-        ├── models
-        │   ├── __init__.py
-        │   ├── class_dicts.json
-        │   ├── constant_filter.joblib
-        │   ├── encoders.joblib
-        │   ├── evaluate_model.py
-        │   ├── one_hot_encoder.joblib
-        │   ├── predict.py
-        │   ├── rf_model.joblib
-        │   ├── scaler.joblib
-        │   ├── selector.joblib
-        │   ├── train_model.py
-        │   └── xgb_model.joblib
-        ├── pipelines
-        │   ├── __init__.py
-        │   ├── model_development.py
-        │   └── prediction_pipeline.py
-        └── utils
-            ├── __init__.py
-            ├── config.py
-            └── load_objects.py
+    ├── animal_disease_prediction
+    │   ├── __init__.py
+    │   ├── data
+    │   │   ├── __init__.py
+    │   │   ├── feature_scaling.py
+    │   │   ├── load_data.py
+    │   │   ├── preprocessing.py
+    │   │   └── preprocessing_input.py
+    │   ├── dev
+    │   │   ├── main.py
+    │   │   ├── test.py
+    │   │   ├── test_data.py
+    │   │   ├── test_models.py
+    │   │   └── test_utils.py
+    │   ├── models
+    │   │   ├── __init__.py
+    │   │   ├── class_dicts.json
+    │   │   ├── constant_filter.joblib
+    │   │   ├── encoders.joblib
+    │   │   ├── evaluate_model.py
+    │   │   ├── one_hot_encoder.joblib
+    │   │   ├── predict.py
+    │   │   ├── rf_model.joblib
+    │   │   ├── scaler.joblib
+    │   │   ├── selector.joblib
+    │   │   ├── train_model.py
+    │   │   └── xgb_model.joblib
+    │   ├── pipelines
+    │   │   ├── __init__.py
+    │   │   ├── model_development.py
+    │   │   └── prediction_pipeline.py
+    │   ├── prediction.egg-info
+    │   │   ├── PKG-INFO
+    │   │   ├── SOURCES.txt
+    │   │   ├── dependency_links.txt
+    │   │   ├── requires.txt
+    │   │   └── top_level.txt
+    │   └── utils
+    │       ├── __init__.py
+    │       ├── config.py
+    │       └── load_objects.py
+    └── animal_disease_prediction.egg-info
+        ├── PKG-INFO
+        ├── SOURCES.txt
+        ├── dependency_links.txt
+        ├── requires.txt
+        └── top_level.txt
 
-21 directories, 67 files
+14 directories, 55 files

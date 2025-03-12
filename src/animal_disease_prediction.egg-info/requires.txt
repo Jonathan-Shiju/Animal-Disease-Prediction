@@ -6,6 +6,7 @@ seaborn>=0.13.2
 joblib
 xgboost
 scipy
+importlib
 
 [dev]
 pytest>=6.2
