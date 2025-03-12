@@ -16,7 +16,6 @@ src/animal_disease_prediction/data/feature_scaling.py
 src/animal_disease_prediction/data/load_data.py
 src/animal_disease_prediction/data/preprocessing.py
 src/animal_disease_prediction/data/preprocessing_input.py
-src/animal_disease_prediction/data/test.py
 src/animal_disease_prediction/dev/main.py
 src/animal_disease_prediction/dev/test.py
 src/animal_disease_prediction/dev/test_data.py

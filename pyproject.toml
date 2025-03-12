@@ -26,7 +26,8 @@ dependencies = [
     "seaborn>=0.13.2",
     "joblib",
     "xgboost",
-    "scipy"
+    "scipy",
+    "importlib",
 ]
 
 authors = [{ name = "Jonathan Shiju", email = "jonathanshiju2003@gmail.com" }]
@@ -39,6 +40,7 @@ dev = ["pytest>=6.2"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+exclude = ["data*"]
 
 [tool.setuptools.package-data]
 "animal_disease_prediction" = ["data/*.csv"]

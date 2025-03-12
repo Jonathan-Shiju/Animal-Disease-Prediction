@@ -1,8 +1,8 @@
-from data.load_data import load_data
-from data.preprocessing import preprocess
+from animal_disease_prediction.data.load_data import load_data
+from animal_disease_prediction.data.preprocessing import preprocess
 
-from models.train_model import train_model
-from models.evaluate_model import evaluate_model
+from animal_disease_prediction.models.train_model import train_model
+from animal_disease_prediction.models.evaluate_model import evaluate_model
 
 from animal_disease_prediction.utils import config
 

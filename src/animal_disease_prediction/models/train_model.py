@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, make_scorer
 from xgboost import XGBClassifier
 import sklearn
-from models.evaluate_model import evaluate_model
+from animal_disease_prediction.models.evaluate_model import evaluate_model
 
 from animal_disease_prediction.utils import config
 
