@@ -1,0 +1,82 @@
+Metadata-Version: 2.2
+Name: prediction
+Version: 0.1.0
+Summary: Predicting diseases in animals using ML models
+Author-email: Jonathan Shiju <jonathanshiju2003@gmail.com>
+Keywords: Animal,Disease,Prediction,Cattle,Birds,Cats,Dogs
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scikit-learn>=1.1.3
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: joblib
+Requires-Dist: xgboost
+Requires-Dist: scipy
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2; extra == "dev"
+
+.
+├── MANIFEST.in
+├── README.md
+├── backend
+│   ├── __init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── model_loader.py
+│   └── routes.py
+├── data
+│   └── raw
+│       └── cleaned_animal_disease_prediction.csv
+├── notebooks
+│   ├── Evaluation.ipynb
+│   ├── ModelTraining.ipynb
+│   ├── PreProcessing.ipynb
+│   └── Visualization.ipynb
+├── pyproject.toml
+└── src
+    ├── __init__.py
+    ├── data
+    │   ├── __init__.py
+    │   ├── feature_scaling.py
+    │   ├── load_data.py
+    │   ├── preprocessing.py
+    │   └── preprocessing_input.py
+    ├── main.py
+    ├── models
+    │   ├── __init__.py
+    │   ├── class_dicts.json
+    │   ├── constant_filter.joblib
+    │   ├── encoders.joblib
+    │   ├── evaluate_model.py
+    │   ├── one_hot_encoder.joblib
+    │   ├── predict.py
+    │   ├── rf_model.joblib
+    │   ├── scaler.joblib
+    │   ├── selector.joblib
+    │   ├── train_model.py
+    │   └── xgb_model.joblib
+    ├── pipelines
+    │   ├── __init__.py
+    │   ├── model_development.py
+    │   └── prediction_pipeline.py
+    ├── test.py
+    ├── test_data.py
+    ├── test_models.py
+    ├── test_utils.py
+    └── utils
+        ├── __init__.py
+        ├── config.py
+        ├── load_objects.py
+        └── logging.py
+
+10 directories, 43 files
